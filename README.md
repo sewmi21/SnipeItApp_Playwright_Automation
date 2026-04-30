@@ -58,8 +58,7 @@ Maven installed
 Then execute:
 
 mvn clean install
-3. Install Playwright browsers
-mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install"
+
 4. Run tests
 mvn test
 
