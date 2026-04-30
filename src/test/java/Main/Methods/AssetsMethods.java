@@ -3,6 +3,7 @@ package Main.Methods;
 import Main.Objects.AssetsXpaths;
 import Main.Objects.LoginXpaths;
 import com.microsoft.playwright.Page;
+import org.testng.Assert;
 
 import java.security.PublicKey;
 
@@ -37,6 +38,10 @@ public class AssetsMethods {
     }
     public void searchID(){
         page.locator(AssetsXpaths.SEARCH_ID).fill(TagID);
-        page.locator("tbody tr a").first().click();page.locator("tbody tr a").first().click();
-    }
+        page.locator(AssetsXpaths.SEARCH_ID).press("Enter");
+        page.locator("tbody tr a").first().click();
+        String actualTag = page.locator(".js-copy-asset_tag").innerText().trim();
+        Assert.assertEquals(actualTag, TagID, "Asset Tag does not match!");
+
+     }
 }

@@ -37,6 +37,7 @@ public class VerifyAssetsCreated extends launchBrowser {
         assetsMethods.createAnAsset();
         assetsMethods.searchID();
 
+
     }
     @AfterTest
     public void tearDown() {
