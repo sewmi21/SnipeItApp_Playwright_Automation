@@ -37,11 +37,19 @@ public class AssetsMethods {
 
     }
     public void searchID(){
+        //search and validate the item created
         page.locator(AssetsXpaths.SEARCH_ID).fill(TagID);
         page.locator(AssetsXpaths.SEARCH_ID).press("Enter");
         page.locator("tbody tr a").first().click();
         String actualTag = page.locator(".js-copy-asset_tag").innerText().trim();
         Assert.assertEquals(actualTag, TagID, "Asset Tag does not match!");
 
+        //Validate history tab
+        page.locator(AssetsXpaths.BTN_HISTORY).click();
+        String fullText = page.locator("a:has-text('#TEST')").first().innerText().trim();
+        String extractedTag = fullText.split("-")[0]
+                .replace("#", "")
+                .trim();
+        Assert.assertEquals(extractedTag, TagID, "Tag ID mismatch!");
      }
 }

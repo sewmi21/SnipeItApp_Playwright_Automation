@@ -13,6 +13,6 @@ public class AssetsXpaths {
     public static final String DD_ASSET_USER= "//span[text()='Select a User']";
     public static final String BTN_SUBMIT= "//button[@id='submit_button']";
     public static final String SEARCH_ID= "//input[@type='search']";
-    public static final String BTN_SEARCH= "//input[@id='tagSearch']";
+    public static final String BTN_HISTORY= "//span[normalize-space()='History'][1]/../..//a";
 
 }
