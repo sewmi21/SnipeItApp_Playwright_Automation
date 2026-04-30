@@ -81,10 +81,7 @@ This project is for demonstration purposes only
 Uses public demo environment of Snipe-IT
 Test data may vary between runs
 
-👨‍💻 Author
-M M S U Mahagedara
-30th April 2026
+Author : M M S U Mahagedara
+Date: 30th April 2026
 
-📜 License
-
-This project is intended for educational and demonstration purposes.
+License : This project is intended for educational and demonstration purposes.
